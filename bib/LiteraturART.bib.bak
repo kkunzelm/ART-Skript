@@ -1,0 +1,105 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF-8
+
+@MISC{Eagle2013,
+  author = {Bob Eagle},
+  title = {Einstein's Field Equations - For Beginners!},
+  howpublished = {Youtube Video},
+  year = {2013},
+  note = {http://www.bobeagle.co.uk/drphysicsa.html},
+  keywords = {Einstein's Field Equations for General Relativity - including the
+	Metric Tensor, Christoffel symbols, Ricci Cuvature Tensor, Curvature
+	Scalar, Stress Energy Momentum Tensor and Cosmological Constant.},
+  owner = {kkunzelm},
+  timestamp = {2014.05.18},
+  url = {https://www.youtube.com/watch?v=foRPKAKZWx8}
+}
+
+@MISC{Gebhardt2014,
+  author = {Thomas Gebhardt},
+  title = {Einführung in die Kombinatorik},
+  year = {2014},
+  owner = {kkunzelm},
+  timestamp = {2014.05.23},
+  url = {http://www.zum.de/Faecher/Materialien/gebhardt/stochastik/Kombin.html}
+}
+
+@BOOK{Grinfeld2013,
+  title = {Introduction to Tensor Analysis and the Calculus of Moving Surfaces},
+  publisher = {Springer},
+  year = {2013},
+  author = {Pavel Grinfeld},
+  owner = {kkunzelm},
+  timestamp = {2014.05.18}
+}
+
+@ARTICLE{Poessel2010,
+  author = {Markus Pössel},
+  title = {Vom Äquivalenzprinzip zur Lichtablenkung},
+  journal = {Einstein Online},
+  year = {2010},
+  volume = {04},
+  pages = {1120},
+  owner = {kkunzelm},
+  timestamp = {2014.05.22},
+  url = {http://www.einstein-online.info/vertiefung/AequivalenzLicht}
+}
+
+@ARTICLE{Poessel2010a,
+  author = {Markus Pössel},
+  title = {Kabine, Schwerkraft und Rakete: Das Äquivalenzprinzip},
+  journal = {Einstein Online},
+  year = {2010},
+  volume = {04},
+  pages = {1111},
+  owner = {kkunzelm},
+  timestamp = {2014.05.22},
+  url = {http://www.einstein-online.info/vertiefung/Aequivalenzprinzip?set_language=de}
+}
+
+@MISC{Ratcliffe2004,
+  author = {Philip G. Ratcliffe},
+  title = {The Tensor Package for {LATEX2e}},
+  year = {2004},
+  owner = {kkunzelm},
+  timestamp = {2014.05.18},
+  url = {http://get-software.net/macros/latex2e/contrib/tensor/tensor.pdf}
+}
+
+@MISC{Rupaner2009,
+  author = {Julia Rupaner},
+  title = {{LATEX-Kurs: Mathematische Formeln}},
+  howpublished = {Technische Universität München. 15. April 2009.},
+  year = {2009},
+  owner = {kkunzelm},
+  timestamp = {2014.05.18},
+  url = {http://www.ma.tum.de/foswiki/pub/Ferienkurse/WiSe0809/LaTeX/2_Mathematik_print.pdf}
+}
+
+@MISC{Susskind2008,
+  author = {Leonard Susskind},
+  title = {The Theoretical Minimum: General Relativity},
+  year = {2008},
+  note = {Video lectures.},
+  keywords = {The theoretical minimum. Einstein. General Relativity.},
+  owner = {kkunzelm},
+  timestamp = {2014.05.18},
+  url = {http://theoreticalminimum.com/courses/general-relativity/2008/fall}
+}
+
+@MISC{WikipediaAequivalenzprinzip2014,
+  title = {Äquivalenzprinzip ({P}hysik)},
+  year = {2014},
+  owner = {kkunzelm},
+  timestamp = {2014.05.22},
+  url = {http://de.wikipedia.org/wiki/Äquivalenzprinzip_(Physik)}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
