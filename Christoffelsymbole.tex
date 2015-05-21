@@ -1,0 +1,170 @@
+\section{Christoffelsymbole}
+
+KHK todo: Grindfeld Kapitel 5.14 und andere Autoren
+
+% Packet graphix einbinden
+% Grafik in Inkscape als eps abspeichern
+% Hier: ohne Rahmen um Grafik
+% Achtung: Immer zuerst \caption und danach erst \label! 
+% Wird dies nicht beachtet, so stimmen die Verweise auf die Bilder nicht mit den Bildnummern überein.
+% Verweis auf Bild im Text: Bild~\ref{pic:DasBild} zeigt ...
+% Anmerkung: Die Tilde sorgt dafür, dass an dieser Stelle nicht umbrochen wird und dass der Abstand konstant bleibt.
+
+
+Im Folgenden werden die Christoffelsymbole und ihre Bedeutung anhand eines einfachen Beispiels dargestellt. Wir wollen sehen welche Rolle ein Bezugssystem bzw.  Koordinaten spielt, dazu arbeiten wir zunächst so weit es geht ohne Bezugssystem bzw. Koordinaten. Anschließend führen wir am Beispiel eines "`lokalen Bezugssystems"' Koordinaten ein. Wie wir das Bezugssystem auswählen wird zunächst willkürlich erscheinen. Wir wollen nur die Symbole am Beispiel von Polarkoordinaten im "flachen Raum" darstellen, ohne komplett zu erklären, wofür sie gut sind.
+
+Wir gehen von zwei willkürlich gewählten Vektoren aus (Abb. \ref{fig:Vektoren-ohne-alles}). Allein die Tatsache, dass wir Vektoren betrachten, ist ein Hinweis darauf, dass wir im flachen Raum (euklidischer Raum) arbeiten. 
+
+\bigskip
+Einschub KH: bitte diesen "`Hinweis"' kurz erklären. Uns ist es inzwischen bewußt, aber für zukünftige Kurse wäre es hilfreich, dies zu erläutern. Versuch von mir: 
+
+Nach klassischem Schulwissen versteht man unter einem Vektor die Menge aller Pfeile mit gleicher Richtung und gleichem Betrag. Man kann sich das auch so vorstellen, dass man einen Vektor im Raum entlang einer geschlossenen Kurve verschieben kann und der Vektor hat noch die selbst Länge und Richtung wie zuvor, wenn er wieder am Ausgangspunkt ankommt. Dies gilt nicht für gekrümmt Räume. 
+
+Einschub Ende
+\bigskip
+
+Es ist wichtig zu verstehen, dass die zwei Vektoren und wie sie zueinander stehen, unabhängig von irgendeinem Bezugssystem bzw. Koordinatensystem sind. 
+
+\begin{figure}
+  \centering
+  \mbox{
+    \includegraphics[width=4cm]{img/Christoffel-Zeichnung-1.png}
+  }
+    \captionsetup{singlelinecheck=off}
+    \caption[.]{Wir gehen von zwei beliebigen Vektoren aus.
+	% eine separate Zeile mit Mathe würde man so eingeben:
+	%    
+	%    \begin{displaymath}
+	%        assoc\_meaning(\&actor(x) maintained(x,\nonumber <(dist\_from(y),1))
+	%    \end{displaymath} 
+	}
+    \label{fig:Vektoren-ohne-alles}
+\end{figure}
+
+Wenn wir die beiden Vektoren vergleichen wollen, können wir z.B. ihre Differenz bilden, also
+\begin{align*}
+	\Delta \overrightarrow{v} &=   \overrightarrow{v}_{(r,\theta)} - \overrightarrow{v}_{(r',\theta')}\\
+\end{align*} 
+Um diese Differenz zu bilden, kann man einen der beiden Vektor zum anderen verschieben und zwar so, dass sich die Startpunkte der beiden Vektoren berühren. Dies ist im flachen Raum z. B. durch geometrische Konstrukten mit Zirkel und Lineal einfach möglich. Die Differenz ist dann ein weiterer Vektor, der ebenfalls von Koordinaten völlig unabhängig existiert.
+
+Wir führen jetzt ein Koordinatensystem ein. Das bedeutet, dass wir "`Zahlen"' mit geometrischen Objekten assoziieren wollen, damit wir mit diese Objekte rechnen können.
+
+Als Koordinatensystem wählen wir ein Polarkoordinatensystem. Vom Ursprung des Polarkoordinatensystems zum Anfangpunkt der Vektoren wird je ein Ortsvektor eingezeichnet. Der Anfang eines Vektors hat meist eine physikalische Bedeutung, z.B. als Bezugspunkt für Kräfte oder die Geschwindigkeit eines Objekts. 
+
+Die Anfangspunkte ("`Startpunkte"') der beiden Vektoren $ \overrightarrow{v}_{(r,\theta)} $ und $ \overrightarrow{v}_{(r',\theta')} $ in  Abb. \ref{fig:Vektoren-und-Ortsvektoren} sind als Funktion des Abstand vom Nullpunkt und des Winkels zu dem horizontalen Strahl des hier willkürlich gewählten Polarkoordinatensystems eingezeichnet.
+
+\begin{figure}
+  \centering
+  \mbox{
+    \includegraphics[width=8cm]{img/Christoffel-Ortsvektoren.png}
+  }
+    \captionsetup{singlelinecheck=off}
+    \caption[.]{Diese beiden Vektoren können wir in Abhängigkeit von r und $ \theta $ und r' und $ \theta$' ausdrücken: $ \overrightarrow{v}_{(r,\theta)} $ und $ \overrightarrow{v}_{(r',\theta')} $ 
+    
+	% eine separate Zeile mit Mathe würde man so eingeben:
+	%    
+	%    \begin{displaymath}
+	%        assoc\_meaning(\&actor(x) maintained(x,\nonumber <(dist\_from(y),1))
+	%    \end{displaymath} 
+	}
+    \label{fig:Vektoren-und-Ortsvektoren}
+\end{figure}
+
+Als Nächstes wollen wir die Vektor-Endpunkte mit Zahlen versehen. Die Endpunkte sind zunächst auch einfach nur Punkte, die man ebenfalls im gewählten Polarkoordinatensystem beschreiben könnte. Dies ist jedoch nicht der eleganteste Ansatz:
+\begin{itemize}
+\item Die Vektorendpunkte existieren meistens NICHT in ursprüngliche Raum, also es ist nicht viel zu erwarten wenn wir so tun.
+\item Diese Verfahren kann man sicher nicht in gekrümmte Raum verallgemeinern, da Vektoren dort nicht ohne weiteres existieren.
+\end{itemize}
+
+Wir legen ein neue, diesmal lokale Koordinatenbasen in die Startpunkte der beiden Vektoren. Wir könnten jeweils ein beliebige Basis auswählen, aber es ist ratsam die Basis irgendwie von den Koordinatensystem abzuleiten, damit kann man quasi automatisch die Basis an jeden Punkt berechnen. Um genau zu sein reicht das Koordinatensystem nicht aus, die "`Geometrie"' der Raum (in unsere Fall flach) muss irgendwie einbezogen werden. Wir werden sehen wie es geschieht. 
+
+Auch wenn wir von den Koordinatensystem ausgehen, gibt es trotzdem unendlich viele Freiheiten wie wir das machen. Wir wählen folgende Methode aus:
+\begin{itemize}
+\item die Richtung der Vektor wird entlang die Änderung von jeder Koordinaten gewählt. D.h., dass wir für eine Vektor $r$ konstant halten und wir lassen $\theta$ ein bisschen variieren. wenn die Variation klein ist, definiert es eine Richtung. Wir machen dann dasselbe mit dem andere Koordinate
+\item die Länge wird proportional zu den metrische Änderung die beim Koordinateänderungen produziert werden. D.h, wenn wir $\theta$ um $\delta\theta$ ändern, der Punkt transportiert sich um $r\delta\theta$. Beim $r$, ist es einfach $\delta r$.
+\end{itemize}
+Diese Art von Basis "`arbeitet"' sehr schön mit dem Tensor Formalismus, da, wir iwr werden sehen, bei Basiswechseln die Komponenten "`ko"'- und "`kontravarianten"' Eigenschaften haben.
+
+\begin{figure}
+  \centering
+  \mbox{
+    \includegraphics[width=8cm]{img/Christoffel-Zeichnung.png}
+  }
+    \captionsetup{singlelinecheck=off}
+    \caption[.]{Jedem der beiden Vektoren $ \overrightarrow{v}_{(r,\theta)} $ und $ \overrightarrow{v}_{(r',\theta')} $ kann man eine eigene Basis zuordnen: A mit den Basisvektoren $ \overrightarrow{e}_{r} $ und $ \overrightarrow{e}_{\theta} $, und B mit den Basisvektoren $ \overrightarrow{e}_{r'} $ und $ \overrightarrow{e}_{\theta'} $. Wichtig: die Länge von alle $\overrightarrow{e}_{r}$ ist konstant und beträgt $1$, dagegen die Längen von $ \overrightarrow{e}_{\theta} $ ist $|r|$. Der Grund ist, dass wir ein Basis wollen die an die Koordinaten {\it angepasst} ist. Da ein Änderung von $\delta\theta$ auf ein Punkt bewirkt ein Streckenänderung mit dem Länge $r\delta\theta$ (Strahlensatz), ist unsere Wahl damit konsistent.
+    
+	% eine separate Zeile mit Mathe würde man so eingeben:
+	%    
+	%    \begin{displaymath}
+	%        assoc\_meaning(\&actor(x) maintained(x,\nonumber <(dist\_from(y),1))
+	%    \end{displaymath} 
+	}
+    \label{fig:Vektoren-und-Basen}
+\end{figure}
+
+Sobald die Basen A und B gewählt wurden, kann man $ \overrightarrow{v}_{(r,\theta)} $ und $ \overrightarrow{v}_{(r',\theta')} $ auch mit Hilfe der lokalen Basen A und B ausdrücken.
+
+\begin{align*}
+	\overrightarrow{v}_{(r,\theta)} &= v^{\theta} \overrightarrow{e}_{\theta} + 
+	                                   v^{r} \overrightarrow{e}_{r}                \\
+	\overrightarrow{v}_{(r',\theta')} &= v^{\theta'} \overrightarrow{e}_{\theta'} + 
+	                                     v^{r'} \overrightarrow{e}_{r'}
+\end{align*} 
+ 
+\begin{align*}
+	\Delta v &=   \overrightarrow{v}_{(r,\theta)} - \overrightarrow{v}_{(r',\theta')}\\
+			&=  v^{\theta} \overrightarrow{e}_{\theta} + v^{r} \overrightarrow{e}_{r}  - v^{\theta'} \overrightarrow{e}_{\theta'} - v^{r'} \overrightarrow{e}_{r'}   \\
+\end{align*} 
+
+Jetzt wollen wir die Vektoren A und B vergleichen. Damit werden wir A zu B transportieren. Wir machen es in 2 Schritten:
+\begin{itemize}
+\item zu nächst lassen wir $r$ konstant und ändern wir nur $\theta$
+\item dann lassen wir $\theta$ konstant und ändern wir $r$
+\end{itemize}
+Wenn wir so machen, können wir später den klassische Analysis Formalismus benutzen (also multidimensionale Differentielle,...)
+
+\begin{figure}
+  \centering
+  \mbox{
+    \includegraphics[width=8cm]{img/Christoffel-Zeichnung -Verschiebung theta.png}
+  }
+    \captionsetup{singlelinecheck=off}
+    \label{fig:Verschiebung Teil 1}
+\end{figure}
+
+
+Den Übergang von $ \overrightarrow{v}_{(r,\theta)} $ zu $ \overrightarrow{v}_{(r',\theta')} $ kann man mit Hilfe eines kleinen Verschiebevektors ausdrücken der ebenfalls eine lokale Basis bekommt. Die Komponenten und die Basis des Verschiebevektors werden mit $\delta$ gekennzeichnet. Durch Ausmultiplizieren und Zusammenfassen erhält man:
+
+\begin{align*}
+	&= v^{\theta} \overrightarrow{e}_{\theta} + v^{r} \overrightarrow{e}_{r} - (v^{\theta} + \delta v^{\theta})(\overrightarrow{e}_{\theta} + \delta\overrightarrow{e}_{\theta}) - (v^{r} + \delta v^{r})(\overrightarrow{e}_{r} + \delta\overrightarrow{e}_{r}) \\
+	\Delta v &= \delta v^{\theta} \overrightarrow{e}_{\theta} - 
+	   v^{\theta} \delta \overrightarrow{e}_{\theta} + 
+	   \delta v^{r} \overrightarrow{e}_{r} - 
+	   v^{r} \delta \overrightarrow{e}_{r}						\\
+	&= - (\delta v^{\theta} \overrightarrow{e}_{\theta} + 
+	    \delta v^{r} \overrightarrow{e}_{r} ) - 
+	   ( v^{\theta} \delta\overrightarrow{e}_{\theta} + 
+	     v^{r} \delta\overrightarrow{e}_{r} )
+\end{align*} 
+
+
+
+
+\begin{figure}
+  \centering
+  \mbox{
+    \includegraphics[width=8cm]{img/Christoffel-Zeichnung-phi.png}
+  }
+    \captionsetup{singlelinecheck=off}
+    \caption[.]{wir haben eine Basis zu den andere parallel transportiert um die besser vergleichen zu können. die Änderungen der Basis Vektoren sind als "r d$\theta$ und $\theta$  angegeben. Da $\overrightarrow{e}_{\theta} $. $r$ mal länger ist als $\overrightarrow{e}_{r}$ muss man in der Koeffizient ein Korrekturfaktor einfügen wenn man die Änderung auf die Basisvektoren expandieren wollen. Ergebnis ist dann: $\overrightarrow{\delta\theta}= \overrightarrow{\delta e}_{r}=\frac{1}{r}\overrightarrow{e}_{\theta}$ und $\overrightarrow{r \delta\theta}= \overrightarrow{\delta e}_{\theta}=-r\overrightarrow{e}_{r}$
+    
+	% eine separate Zeile mit Mathe würde man so eingeben:
+	%    
+	%    \begin{displaymath}
+	%        assoc\_meaning(\&actor(x) maintained(x,\nonumber <(dist\_from(y),1))
+	%    \end{displaymath} 
+	}
+    \label{fig:nur Delta Phi}
+\end{figure}
+ 
+
